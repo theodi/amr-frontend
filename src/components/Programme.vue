@@ -2,14 +2,6 @@
 	<div class="main">
 		<h1>Programmes</h1>
 		<router-link :to="{ path: '/' }">Home</router-link>
-		<div v-for="programme in programmes">
-			<div class="box">
-				<h1>{{ programme.name }}</h1>
-				<p>{{ programme }}</p>
-			</div>
-
-		</div>
-
 	</div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="main">
+	<div>
 		<h1>Programmes</h1>
 		<router-link :to="{ path: '/' }">Home</router-link>
 		<div v-for="programme in programmes">

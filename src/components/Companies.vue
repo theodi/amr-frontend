@@ -3,7 +3,7 @@
 		<div v-for="company in companies">
 			<div class="box">
 				<h1>{{ company.name }}</h1>
-				<a v-bind:href="company.url">{{ company.name }}</a>
+				<a v-bind:href="'/#/programmes/' + company.url">{{ company.name }}</a>
 				<h3>Programmes</h3>
 				<ul v-for="programme in company.programmes">
 					<li>{{ programme }}</li>
@@ -21,7 +21,7 @@
 import {getAllCompanies} from '../api/companies';
 
 export default {
-  name: 'Api',
+  name: 'Companies',
   data () {
     return {
 			companies: [],

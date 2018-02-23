@@ -4,11 +4,11 @@
 			<div class="box">
 				<h1>{{ company.name }}</h1>
 				<a v-bind:href="company.url">{{ company.name }}</a>
-				<h2>Programmes</h2>
+				<h3>Programmes</h3>
 				<ul v-for="programme in company.programmes">
 					<li>{{ programme }}</li>
 				</ul>
-				<h2>Antimicrobials</h2>
+				<h3>Antimicrobials</h3>
 				<ul v-for="antimicrobial in company.antimicrobials">
 					<li>{{ antimicrobial }}</li>
 				</ul>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import {getAllCompanies} from '../api/companies';
 
 export default {
   name: 'Api',
@@ -29,7 +29,7 @@ export default {
     }
   },
 	created() {
-		axios.get('https://odi-amr.herokuapp.com/api/companies')
+		getAllCompanies()
 		.then(response => {
       this.companies = response.data.companies
     })
@@ -43,12 +43,6 @@ export default {
 <style scoped>
 	h1, h2 {
 	  font-weight: normal;
-	}
-
-	.main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 	}
 
 	.box {

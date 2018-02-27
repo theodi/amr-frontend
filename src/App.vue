@@ -1,11 +1,13 @@
 <template>
   <div id="app">
+		<div class="header">
+			<h2>Antimicrobial Resistance Register</h2>
+		</div>
 		<div class="wrapper">
-			<div class="header">Header</div>
 			<div class="menu">
-				<router-link :to="{ path: '/' }" class="link">Welcome</router-link>
-				<router-link :to="{ path: '/about' }" class="link">About this research</router-link>
-				<router-link :to="{ path: '/companies' }" class="link">Companies</router-link>
+				<router-link :to="{ path: '#' }" class="link">Welcome</router-link>
+				<router-link :to="{ path: '#' }" class="link">About this research</router-link>
+				<router-link :to="{ path: '#' }" class="link">Companies</router-link>
 				<router-link :to="{ path: '/programmes' }" class="link">Programmes</router-link>
 			</div>
 			<div class="content">
@@ -68,6 +70,7 @@ export default {
 		background-color: #f6f6f6;
 		text-align: left;
 		margin-bottom: 2em;
+		margin-top: 2em;
 		padding: 1em;
 	}
 
@@ -79,5 +82,9 @@ export default {
 
 	.title-head {
 		text-align: left;
+	}
+
+	.small {
+		margin-bottom: 5em;
 	}
 </style>

@@ -13,24 +13,24 @@
 </template>
 
 <script>
-import {getAllProgrammes} from '../api/programmes';
+import {getAllProgrammes} from '../api/programmes'
 
 export default {
-  name: 'Programme',
-  data () {
-    return {
+	name: 'Programme',
+	data () {
+		return {
 			programmes: [],
 			errors: []
-    }
-  },
-	created() {
+		}
+	},
+	created () {
 		getAllProgrammes()
-		.then(response => {
-			this.programmes = response.data.programmes
-		})
-		.catch(e => {
-			this.errors.push(e)
-		})
+			.then(response => {
+				this.programmes = response.data.programmes
+			})
+			.catch(e => {
+				this.errors.push(e)
+			})
 	}
 }
 </script>

@@ -20,24 +20,24 @@
 </template>
 
 <script>
-import {getAllCompanies} from '../api/companies';
+import {getAllCompanies} from '../api/companies'
 
 export default {
-  name: 'Companies',
-  data () {
-    return {
+	name: 'Companies',
+	data () {
+		return {
 			companies: [],
 			errors: []
-    }
-  },
-	created() {
+		}
+	},
+	created () {
 		getAllCompanies()
-		.then(response => {
-      this.companies = response.data.companies
-    })
-    .catch(e => {
-      this.errors.push(e)
-    })
+			.then(response => {
+				this.companies = response.data.companies
+			})
+			.catch(e => {
+				this.errors.push(e)
+			})
 	}
 }
 </script>

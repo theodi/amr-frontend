@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Programmes</h1>
+		<h1>Programme</h1>
 		<router-link :to="{ path: '/' }">Home</router-link>
 	</div>
 </template>

@@ -4,7 +4,7 @@
 		<div v-for="company in companies">
 			<div class="box">
 				<h2>
-					<a v-bind:href="'/#/programmes/' + company.url">{{ company.name }}</a>
+					<a v-bind:href="'/programmes/' + company.url">{{ company.name }}</a>
 				</h2>
 				<h4>Programmes</h4>
 				<ul v-for="programme in company.programmes">

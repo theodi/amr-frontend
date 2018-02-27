@@ -3,10 +3,10 @@
 		<div class="wrapper">
 			<div class="header">Header</div>
 			<div class="menu">
-				<a class="link" href="#">Welcome</a>
-				<a class="link" href="#">About this research</a>
-				<a class="link" href="#">Companies</a>
-				<a class="link" href="#">Research programmes</a>
+				<router-link :to="{ path: '/' }" class="link">Welcome</router-link>
+				<router-link :to="{ path: '/about' }" class="link">About this research</router-link>
+				<router-link :to="{ path: '/companies' }" class="link">Companies</router-link>
+				<router-link :to="{ path: '/programmes' }" class="link">Programmes</router-link>
 			</div>
 			<div class="content">
 				<router-view/>

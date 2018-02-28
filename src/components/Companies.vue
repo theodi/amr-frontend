@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<h1 class="title-head">Companies</h1>
+		<h3 style="color:red; text-align: left;">Data source can be found <a href="https://odi-amr.herokuapp.com/api/companies">here</a></h3>
 		<div v-for="c in companies" :key="c.id">
 			<div class="box">
 				<h2>{{ c.name }}</h2>
@@ -8,7 +9,7 @@
 					<h3>{{ p.name }} Programme</h3>
 					<p><strong>Years active: </strong>{{ p.yearsActive }}</p>
 					<p><strong>Countries: </strong>{{ p.countriesRegions }}</p>
-					<a v-bind:href="'/programmes/' + p.url">Find out more...</a>
+					<router-link :to="'/programmes/' + p.url">More on {{ p.name }}</router-link>
 				</div>
 			</div>
 		</div>

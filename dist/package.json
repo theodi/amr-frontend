@@ -1,0 +1,10 @@
+{
+ "name": "AMR-frontend",
+ "version": "1.0.0",
+ "description": "Antimicrobial resistance register",
+ "author": "Phil Lang - Open Data Institute",
+ "private": false,
+ "scripts": {
+   "postinstall": "npm install express"
+ }
+}

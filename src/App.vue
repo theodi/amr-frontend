@@ -87,4 +87,8 @@ export default {
 	.small {
 		margin-bottom: 5em;
 	}
+
+	h3 {
+		font-size: 1.4em;
+	}
 </style>

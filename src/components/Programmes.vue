@@ -2,7 +2,7 @@
 	<div>
 		<h1 class="title-head">Programmes:</h1>
 		<h3 style="color:red; text-align: left;">Data shown below is not exhaustive<br />Programmes will have individual pages<br />Data source can be found <a href="https://odi-amr.herokuapp.com/api/programmes">here</a></h3>
-		<div v-for="programme in programmes" :key="programme">
+		<div v-for="programme in programmes" :key="programme.id">
 			<div class="box">
 				<h3>{{ programme.name }}</h3>
 				<small>{{ programme.programmeName }}</small>

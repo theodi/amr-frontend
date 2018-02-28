@@ -1,17 +1,17 @@
 <template>
 	<div>
 		<h1 class="title-head">Companies</h1>
-		<div v-for="company in companies">
+		<div v-for="company in companies" :key="company">
 			<div class="box">
 				<h2>
 					<a v-bind:href="'/programmes/' + company.url">{{ company.name }}</a>
 				</h2>
 				<h4>Programmes</h4>
-				<ul v-for="programme in company.programmes">
+				<ul v-for="programme in company.programmes" :key="programme">
 					<li>{{ programme }}</li>
 				</ul>
 				<h4>Antimicrobials</h4>
-				<ul v-for="antimicrobial in company.antimicrobials">
+				<ul v-for="antimicrobial in company.antimicrobials" :key="antimicrobial">
 					<li>{{ antimicrobial }}</li>
 				</ul>
 			</div>

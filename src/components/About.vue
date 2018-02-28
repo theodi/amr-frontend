@@ -7,9 +7,7 @@
 <script>
 
 export default {
-	name: 'Home',
-	data () {
-	}
+	name: 'About'
 }
 </script>
 

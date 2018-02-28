@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 		<div class="header">
-			<h2 style="text-align: center;">Antimicrobial Resistance Register</h2>
+			<h3 style="text-align: center;">Antimicrobial Resistance Register</h3>
 		</div>
 		<div class="wrapper">
 			<div class="menu">
@@ -78,6 +78,12 @@ export default {
 		padding: 1em;
 	}
 
+	.programme-box {
+		border-bottom: 3px solid black;
+		padding-bottom: 1em;
+		margin-bottom: 2em;
+	}
+
 	.link {
 		display: block;
 		color: #000000;
@@ -86,6 +92,10 @@ export default {
 
 	.small {
 		margin-bottom: 5em;
+	}
+
+	h2 {
+		margin-bottom: 1em;
 	}
 
 	h3 {

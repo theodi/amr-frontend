@@ -32,12 +32,12 @@ export default {
 	},
 	created () {
 		getAllCompanies()
-			.then(response => {
-				this.companies = response.data.companies
-			})
-			.catch(e => {
-				this.errors.push(e)
-			})
+		.then(response => {
+			this.companies = response.data.companies
+		})
+		.catch(e => {
+			this.errors.push(e)
+		})
 	}
 }
 </script>

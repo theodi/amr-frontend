@@ -17,12 +17,12 @@ export default {
 	},
 	created () {
 		getAllProgrammes()
-			.then(response => {
-				this.programmes = response.data.programmes
-			})
-			.catch(e => {
-				this.errors.push(e)
-			})
+		.then(response => {
+			this.programmes = response.data.programmes
+		})
+		.catch(e => {
+			this.errors.push(e)
+		})
 	}
 }
 </script>

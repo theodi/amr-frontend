@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1 class="title-head">Programmes: <strong style="color: red;">IN DEVELOPMENT</strong></h1>
+		<h1 class="title-head">Programmes:</h1>
 		<h3 style="color:red; text-align: left;">Data shown below is not exhaustive<br />Programmes will have individual pages<br />Data source can be found <a href="https://odi-amr.herokuapp.com/api/programmes">here</a></h3>
 		<div v-for="programme in programmes">
 			<div class="box">

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 		<div class="header">
-			<h2>Antimicrobial Resistance Register</h2>
+			<h2 style="text-align: center;">Antimicrobial Resistance Register</h2>
 		</div>
 		<div class="wrapper">
 			<div class="menu">
@@ -17,7 +17,7 @@
 			<div class="content">
 				<router-view></router-view>
 			</div>
-			<div class="footer">Footer</div>
+			<!-- <div class="footer">Footer</div> -->
 		</div>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
 		font-family: 'Avenir', Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
+		text-align: left;
 		color: #000000;
 	}
 
@@ -82,10 +82,6 @@ export default {
 		display: block;
 		color: #000000;
 		margin-bottom: 1em;
-	}
-
-	.title-head {
-		text-align: left;
 	}
 
 	.small {

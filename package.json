@@ -11,7 +11,7 @@
     "test": "npm run e2e",
     "lint": "eslint --ext .js,.vue src test/e2e/specs",
     "build": "node build/build.js",
-		"deploy": "git subtree push — prefix dist heroku master"
+		"deploy": "git push heroku `git subtree split --prefix dist master`:master"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -1,7 +1,6 @@
 <template>
 	<div>
-		<h1 class="title-head">Programmes:</h1>
-		<h3 style="color:red; text-align: left;">Data source can be found <a href="https://odi-amr.herokuapp.com/api/programmes">here</a></h3>
+		<h2 class="title-head">Programmes</h2>
 		<div v-for="p in programmes" :key="p.id">
 			<div class="box">
 				<h3>{{ p.name }}</h3>

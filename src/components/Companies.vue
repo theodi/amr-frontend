@@ -1,15 +1,18 @@
 <template>
 	<div>
-		<h1 class="title-head">Companies</h1>
-		<h3 style="color:red; text-align: left;">Data source can be found <a href="https://odi-amr.herokuapp.com/api/companies">here</a></h3>
+		<h2 class="title-head">Companies</h2>
 		<div v-for="c in companies" :key="c.id">
 			<div class="box">
-				<h2>{{ c.name }}</h2>
-				<div v-for="p in getProgrammes(c.programmes)" :key="p.id" class="programme-box">
-					<h3>{{ p.name }} Programme</h3>
-					<p><strong>Years active: </strong>{{ p.yearsActive }}</p>
-					<p><strong>Countries: </strong>{{ p.countriesRegions }}</p>
-					<router-link :to="'/programmes/' + p.url">More on {{ p.name }}</router-link>
+				<h3>{{ c.name }}</h3>
+				<p>Description</p>
+				<div v-for="p in getProgrammes(c.programmes)" :key="p.id">
+					<h4>{{ p.name }} Programme</h4>
+					<div class="programme-meta">
+						<p><strong>Years active: </strong>{{ p.yearsActive }}</p>
+						<p><strong>Countries: </strong>{{ p.countriesRegions.length }}</p>
+						<p><strong>Studies: </strong>{{ p.numberOfStudies }}</p>
+						<router-link :to="'/programmes/' + p.url" class="arrow-right"></router-link>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -58,4 +61,5 @@ export default {
 </script>
 
 <style scoped>
+	@import "../assets/stylesheets/components/companies.scss"
 </style>

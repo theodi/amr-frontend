@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1 class="title-head">Welcome <span style="color: red;">IN DEVELOPMENT</span></h1>
+		<h2 class="title-head">Welcome</h2>
 		<p>The threat caused by antimicrobial resistance
 		(AMR) is a growing and urgent global health problem. Currently up to
 		700,000 people globally, including 50,000 people in Europe and the USA,
@@ -17,6 +17,7 @@
 		surveillance studies externally to guide appropriate antibiotic prescription,
 		to set up new breakpoints for antibiotics and to encourage wider innovation
 		in this area.</p>
+		<h2>About the initiative</h2>
 	</div>
 </template>
 

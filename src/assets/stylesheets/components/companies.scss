@@ -1,0 +1,15 @@
+.programme-meta {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid black;
+	margin-bottom: 0em;
+	color: #716d6d;
+}
+
+.arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid black;
+}

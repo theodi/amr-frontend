@@ -161,37 +161,6 @@ export default {
 }
 </script>
 
-<style scoped>
-
-.head-content-box {
-	padding: 0 1em 1em 1em;
-}
-
-.content-box {
-	background-color: #FAFAFA;
-	padding: 1em;
-	margin-bottom: 2em;
-	border: 1px solid #F0F0F0;
-}
-
-.meta-box {
-	border-bottom: 2px solid black;
-	margin: 1.4em 0 1em 0;
-}
-
-.anti-box {
-	border-bottom: 1px solid #7E7E7E;
-	padding-top:1em;
-}
-
-td {
-	border-top: none;
-}
-
-.td-title {
-	text-align: right;
-	border-right: 2px solid black;
-	padding-right: 2em;
-	width: 35%;
-}
+<style lang="scss" scoped>
+	@import "../assets/stylesheets/components/_programme.scss"
 </style>

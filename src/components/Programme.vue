@@ -1,24 +1,27 @@
 <template>
 	<div>
 		<div v-for="p in getProgrammes()" :key="p.id">
-			<h2>{{ p.name }} Programme</h2>
-			<div v-for="c in getCompanies(p.companies)" :key="c.id">
-				<strong>Conducted by {{ c.name }}</strong>
+			<div class="head-content-box">
+				<h2>{{ p.name }} Programme</h2>
+				<h4 v-for="c in getCompanies(p.companies)" :key="c.id">Conducted by {{ c.name }}</h4>
+				<div class="meta-box">
+					<p><strong>Active: </strong> {{ p.yearsActive }}</p>
+					<p><strong>Studies: </strong> {{ p.numberOfStudies }}</p>
+					<p><strong>Regions: </strong> <span v-for="r in p.countriesRegions" :key="r.id">{{ r }}, </span></p>
+				</div>
+				<h3>Primary objective</h3>
+				<p>{{ p.primaryObjective }}</p>
 			</div>
-			<div class="">
-				<p>Active: {{ p.yearsActive }}</p>
-				<p>Regions: {{ p.countriesRegions }}</p>
-				<p>Studies: {{ p.numberOfStudies }}</p>
+			<div class="content-box">
+				<h3>Antimicrobials used in this programme</h3>
+				<div class="anti-box" v-for="a in getAntimicrobials(p.antimicrobials)" :key="a.id">
+					<h4>{{ a.genericName }}</h4>
+					<p>Class of agent: {{ a.classOfAgent }}</p>
+					<p>Trade names: <span v-for="t in a.tradeName" :key="t.id">{{ t }}, </span></p>
+				</div>
 			</div>
-			<h4>Primary objective</h4>
-			<p>{{ p.primaryObjective }}</p>
-			<h4>Antimicrobials used in this programme</h4>
-			<div v-for="a in getAntimicrobials(p.antimicrobials)" :key="a.id">
-				<p>Trade name: {{ a.genericName }}</p>
-				<p>Class of agent: {{ a.classOfAgent }}</p>
-			</div>
-			<div class="table-box">
-				<h4>About the data</h4>
+			<div class="content-box">
+				<h3>About the data</h3>
 				<table class="table table-striped">
 					<tbody>
 						<tr>
@@ -52,8 +55,8 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="table-box">
-				<h4>Dataset</h4>
+			<div class="content-box">
+				<h3>Dataset</h3>
 				<table class="table table-striped">
 					<tbody>
 						<tr>
@@ -152,7 +155,6 @@ export default {
 			list.forEach((i) => {
 				array.push(this.antimicrobials[i])
 			})
-			console.log(array)
 			return array
 		}
 	}
@@ -161,10 +163,25 @@ export default {
 
 <style scoped>
 
-.table-box {
+.head-content-box {
+	padding: 0 1em 1em 1em;
+}
+
+.content-box {
 	background-color: #FAFAFA;
 	padding: 1em;
 	margin-bottom: 2em;
+	border: 1px solid #F0F0F0;
+}
+
+.meta-box {
+	border-bottom: 2px solid black;
+	margin: 1.4em 0 1em 0;
+}
+
+.anti-box {
+	border-bottom: 1px solid #7E7E7E;
+	padding-top:1em;
 }
 
 td {

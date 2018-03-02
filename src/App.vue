@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 		<div class="header">
-			<h3 style="text-align: center;">Antimicrobial Resistance Register</h3>
+			<h1 style="text-align: center;">AMR RESEARCH INITIATIVE</h1>
 		</div>
 		<div class="wrapper">
 			<div class="menu">
@@ -47,12 +47,14 @@ export default {
 		grid-column: span 12;
 		background: #f6f6f6;
 		padding: 1em;
+		margin-bottom: 2em;
 	}
 
 	.menu {
 		grid-column: span 4;
 		grid-row: span 12;
 		padding: 2em;
+		padding-right: 3em;
 		margin-left: 10vw;
 		text-align: right;
 	}
@@ -90,15 +92,22 @@ export default {
 		margin-bottom: 1em;
 	}
 
-	.small {
-		margin-bottom: 5em;
+	h1 {
+		font-size: 1.8em;
+		font-weight: 700;
 	}
 
 	h2 {
-		margin-bottom: 1em;
+		font-size: 1.6em;
+		font-weight: 700;
 	}
 
 	h3 {
 		font-size: 1.4em;
+		font-weight: 700;
+	}
+
+	h4 {
+		font-size: 1.2em;
 	}
 </style>

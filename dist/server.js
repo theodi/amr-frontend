@@ -3,19 +3,6 @@ const path = require('path');
 const history = require('connect-history-api-fallback')
 const serveStatic = require('serve-static');
 const app = express();
-const server = require('auth-static')
-
-server({
-    options: {
-        cache: 3600,
-        gzip: true
-    },
-    password: process.env.PASSWORD,
-    port: 1234,
-    realm: 'Private',
-    root: './dist',
-    username: process.env.USERNAME
-})
 
 app.use(serveStatic(__dirname));
 app.use(history())

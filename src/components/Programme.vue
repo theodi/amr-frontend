@@ -116,14 +116,14 @@ export default {
 		})
 		.catch(e => {
 			this.errors.push(e)
-		}),
+		})
 		getAllCompanies()
 		.then(response => {
 			this.companies = response.data.companies
 		})
 		.catch(e => {
 			this.errors.push(e)
-		}),
+		})
 		getAllAntimicrobials()
 		.then(response => {
 			this.antimicrobials = response.data.antimicrobials

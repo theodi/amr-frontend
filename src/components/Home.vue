@@ -18,6 +18,21 @@
 		to set up new breakpoints for antibiotics and to encourage wider innovation
 		in this area.</p>
 		<h2>About the initiative</h2>
+		<p>This initiative, grant-funded by the Wellcome Trust, will focus on openly
+			publishing industry sponsored human antimicrobial surveillance data in order:</p>
+		<ul>
+			<li>to improve understanding of resistance trends</li>
+			<li>to inform appropriate antibiotic and vaccine use and over time, to help
+				increase surveillance capabilities globally.</li>
+		</ul>
+		<p>With the active participation and data from leading pharmaceutical
+			organisations, interested research organisations, and direction from the
+			Wellcome Trust and The Open Data Institute, the goal is to agree common
+			standards and develop a web-based platform for making antimicrobial
+			resistance surveillance data openly published.</p>
+		<p>Insights and learnings can then be derived which will benefit clinicians,
+			global organisations such as the United Nations, the World Health
+			Organisation, and wider society.</p>
 	</div>
 </template>
 

@@ -8,9 +8,9 @@
 				<div v-for="p in getProgrammes(c.programmes)" :key="p.id">
 					<h4>{{ p.name }} Programme</h4>
 					<div class="programme-meta">
-						<p><strong>Years active: </strong>{{ p.yearsActive }}</p>
-						<p><strong>Countries: </strong>{{ p.countriesRegions.length }}</p>
-						<p><strong>Studies: </strong>{{ p.numberOfStudies }}</p>
+						<p class="years"><strong>Years active: </strong>{{ p.yearsActive }}</p>
+						<p class="countries"><strong>Countries: </strong>{{ p.countriesRegions.length }}</p>
+						<p class="studies"><strong>Studies: </strong>{{ p.numberOfStudies }}</p>
 						<router-link :to="'/programmes/' + p.url" class="arrow-right"></router-link>
 					</div>
 				</div>
@@ -60,6 +60,6 @@ export default {
 }
 </script>
 
-<style scoped>
-	@import "../assets/stylesheets/components/companies.scss"
+<style lang="scss" scoped>
+	@import "../assets/stylesheets/components/_companies.scss"
 </style>

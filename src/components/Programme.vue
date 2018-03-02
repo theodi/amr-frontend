@@ -5,8 +5,10 @@
 				<h2>{{ p.name }} Programme</h2>
 				<h4 v-for="c in getCompanies(p.companies)" :key="c.id">Conducted by {{ c.name }}</h4>
 				<div class="meta-box">
-					<p><strong>Active: </strong> {{ p.yearsActive }}</p>
-					<p><strong>Studies: </strong> {{ p.numberOfStudies }}</p>
+					<div class="meta-content-box">
+						<p class="active"><strong>Active: </strong> {{ p.yearsActive }}</p>
+						<p class="studies"><strong>Studies: </strong> {{ p.numberOfStudies }}</p>
+					</div>
 					<p><strong>Regions: </strong> <span v-for="r in p.countriesRegions" :key="r.id">{{ r }}, </span></p>
 				</div>
 				<h3>Primary objective</h3>
@@ -16,8 +18,10 @@
 				<h3>Antimicrobials used in this programme</h3>
 				<div class="anti-box" v-for="a in getAntimicrobials(p.antimicrobials)" :key="a.id">
 					<h4>{{ a.genericName }}</h4>
-					<p>Class of agent: {{ a.classOfAgent }}</p>
-					<p>Trade names: <span v-for="t in a.tradeName" :key="t.id">{{ t }}, </span></p>
+					<div class="anti-meta flex-start">
+						<p class="trade-name"><strong>Trade names: </strong><span v-for="t in a.tradeName" :key="t.id">{{ t }}, </span></p>
+						<p class="class-name"><strong>Class of agent: </strong>{{ a.classOfAgent }}</p>
+					</div>
 				</div>
 			</div>
 			<div class="content-box">

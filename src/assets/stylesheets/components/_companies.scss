@@ -4,6 +4,17 @@
 	border-bottom: 2px solid black;
 	margin-bottom: 0em;
 	color: #716d6d;
+	text-align: left;
+
+	.years, .countries, .studies {
+		flex: 0 0 20%;
+		padding-bottom: 0.4em;
+		margin-bottom: 0;
+
+		&.years {
+			flex: 0 0 45%;
+		}
+	}
 }
 
 .arrow-right {
@@ -11,5 +22,5 @@
 	height: 0;
 	border-top: 10px solid transparent;
 	border-bottom: 10px solid transparent;
-	border-left: 10px solid black;
+	border-left: 10px solid #5BE6C8;
 }

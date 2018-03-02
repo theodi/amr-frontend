@@ -3,7 +3,19 @@
 
 	.meta-box {
 		border-bottom: 2px solid black;
-		margin: 1.4em 0 1em 0;
+		margin: 1em 0 1em 0;
+		
+		.meta-content-box {
+			display: flex;
+
+			.active {
+				flex: 0 0 40%;
+			}
+
+			.studies {
+				flex: 0 0 60%;
+			}
+		}
 	}
 }
 
@@ -15,17 +27,35 @@
 
 	.anti-box {
 		border-bottom: 1px solid #7E7E7E;
-		padding-top:1em;
+		padding-top:1.4em;
+
+		.anti-meta {
+			display: flex;
+			justify-content: space-between;
+			text-align: left;
+
+			.trade-name {
+				flex: 0 0 60%;
+			}
+
+			.class-name {
+				flex: 0 0 40%;
+			}
+		}
 	}
 
-	td {
-		border-top: none;
-	}
+	table {
+		margin-top: 1.4em;
 
-	.td-title {
-		text-align: right;
-		border-right: 2px solid black;
-		padding-right: 2em;
-		width: 35%;
+		td {
+			border-top: none;
+		}
+
+		.td-title {
+			text-align: right;
+			border-right: 2px solid black;
+			padding-right: 2em;
+			width: 35%;
+		}
 	}
 }

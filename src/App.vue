@@ -1,17 +1,18 @@
 <template>
   <div id="app">
 		<div class="header">
-			<h1>AMR RESEARCH INITIATIVE</h1>
+			<div class="header-content">
+				<h1>AMR RESEARCH INITIATIVE</h1>
+				<p>A partnership between the Open Data Institute and Wellcome Trust</p>
+			</div>
 		</div>
 		<div class="wrapper">
 			<div class="menu">
-				<!-- <a href="/" class="link">Welcome</a>
-				<a href="/about" class="link">About</a>
-				<a href="/companies" class="link">Companies</a>
-				<a href="/programmes" class="link">Programmes</a> -->
-				<router-link :to="{ path: '/' }" class="link">About this research</router-link>
-				<router-link :to="{ path: '/companies' }" class="link">Companies</router-link>
-				<router-link :to="{ path: '/programmes' }" class="link">Programmes</router-link>
+				<div class="menu-links">
+					<router-link :to="{ path: '/' }" class="link">About this research</router-link>
+					<router-link :to="{ path: '/companies' }" class="link">Companies</router-link>
+					<router-link :to="{ path: '/programmes' }" class="link">Programmes</router-link>
+				</div>
 			</div>
 			<div class="content">
 				<router-view></router-view>

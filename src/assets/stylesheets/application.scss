@@ -1,0 +1,85 @@
+#app {
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: left;
+	color: #000000;
+}
+
+// Global Typography
+h1 {
+	font-size: 1.8em;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 1.6em;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+// CSS Grid structure
+
+.header {
+	grid-column: span 12;
+	background: #f6f6f6;
+	padding: 1em;
+	margin-bottom: 2em;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 40px 100px 40px;
+
+	.menu {
+		grid-column: span 4;
+		grid-row: span 12;
+		padding: 2em;
+		padding-right: 3em;
+		margin-left: 10vw;
+		text-align: right;
+
+		a {
+			display: block;
+			color: #000000;
+			margin-bottom: 1em;
+		}
+	}
+
+	.content {
+		grid-column: span 8;
+		grid-row: span 12;
+		padding: 2em;
+		margin-right: 10vw;
+	}
+
+	.footer {
+		grid-column: span 12;
+		background: #f6f6f6;
+		padding: 1em;
+	}
+}
+
+// Box elements for content
+.box {
+	background-color: #f6f6f6;
+	text-align: left;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	padding: 1em;
+
+	.programme-box {
+		border-bottom: 3px solid black;
+		padding-bottom: 1em;
+		margin-bottom: 2em;
+	}
+}

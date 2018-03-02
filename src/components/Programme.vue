@@ -17,23 +17,76 @@
 				<p>Trade name: {{ a.genericName }}</p>
 				<p>Class of agent: {{ a.classOfAgent }}</p>
 			</div>
-			<h4>About the data</h4>
-			<p>Isolates collection method: {{ p.methodology.isolateCollection }}</p>
-			<p>Types of surveillance: {{ p.methodology.specificToSurveillance }}</p>
-			<p>Organism identification: {{ p.methodology.organismIdentification }}</p>
-			<p>Methodology and breakpoints: {{ p.methodology.methodologyBreakpoints }}</p>
-			<p>Inclusion and exclusion criteria: {{ p.methodology.inclusionCriteria }}</p>
-			<p>Are infections hospital or community acquired? {{ p.methodology.infectionSourceIdentificationPossible }}</p>
-			<p>Can isolated be identified from the community? {{p.methodology.communityIdentificationPossible }}</p>
-			<h4>Dataset</h4>
-			<p>Data stored: {{ p.dataset.stored }}</p>
-			<p>Data access: {{ p.dataset.stored }}</p>
-			<p>Access: {{ p.dataset.datasetAccessWho }}</p>
-			<p>Data curator: {{ p.dataset.datasetAccessResponsible }}</p>
-			<p>Isolates number: {{ p.dataset.isolates }}</p>
-			<p>Format: {{ p.dataset.format }}</p>
-			<p>How is data from previous years added: {{ p.dataset.integration }}</p>
-			<p></p>
+			<div class="table-box">
+				<h4>About the data</h4>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<td class="td-title"><strong>Isolates collection method:</strong></td>
+							<td>{{ p.methodology.isolateCollection }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Types of surveillance:</strong></td>
+							<td>{{ p.methodology.specificToSurveillance }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Organism identification:</strong></td>
+							<td>{{ p.methodology.organismIdentification }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Methodology and breakpoints:</strong></td>
+							<td>{{ p.methodology.methodologyBreakpoints }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Inclusion and exclusion criteria:</strong></td>
+							<td>{{ p.methodology.inclusionCriteria }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Are infections hospital or community acquired?</strong></td>
+							<td>{{ p.methodology.infectionSourceIdentificationPossible }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Can isolated be identified from the community?</strong></td>
+							<td>{{p.methodology.communityIdentificationPossible }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="table-box">
+				<h4>Dataset</h4>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<td class="td-title"><strong>Data stored:</strong></td>
+							<td>{{ p.dataset.stored }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Data access:</strong></td>
+							<td>{{ p.dataset.stored }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Access:</strong></td>
+							<td>{{ p.dataset.datasetAccessWho }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Data curator:</strong></td>
+							<td>{{ p.dataset.datasetAccessResponsible }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Isolates number:</strong></td>
+							<td>{{ p.dataset.isolates }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Format:</strong></td>
+							<td>{{ p.dataset.format }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>How is data from previous years added:</strong></td>
+							<td>{{ p.dataset.integration }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </template>
@@ -107,4 +160,21 @@ export default {
 </script>
 
 <style scoped>
+
+.table-box {
+	background-color: #FAFAFA;
+	padding: 1em;
+	margin-bottom: 2em;
+}
+
+td {
+	border-top: none;
+}
+
+.td-title {
+	text-align: right;
+	border-right: 2px solid black;
+	padding-right: 2em;
+	width: 35%;
+}
 </style>

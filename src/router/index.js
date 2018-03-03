@@ -3,7 +3,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import CompaniesPage from '@/components/Companies'
-import AboutPage from '@/components/About'
 import ProgrammesPage from '@/components/Programmes'
 import ProgrammePage from '@/components/Programme'
 
@@ -16,11 +15,6 @@ export default new Router({
 			path: '/',
 			name: 'Home',
 			component: Home
-		},
-		{
-			path: '/about',
-			name: 'About',
-			component: AboutPage
 		},
 		{
 			path: '/companies',

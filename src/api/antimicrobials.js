@@ -1,10 +1,8 @@
 import axios from 'axios'
 
 export const getAllAntimicrobials = () => {
-	var key = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik5UTTNSRFU1TWpBeE1FUTVNMFl4TjBWRU16STBPRVk1UmpGQk16QTVPRUUxTmpWRFJqRTJRZyJ9.eyJpc3MiOiJodHRwczovL2xhbmdwaGlsLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJFUHR1S2t4QWRhNkhickQySW1kdDY1QVljVHdrUzZtRkBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9vZGktYW1yLmhlcm9rdWFwcC5jb20iLCJpYXQiOjE1MjAxMTAwMjUsImV4cCI6MTUyMDE5NjQyNSwiYXpwIjoiRVB0dUtreEFkYTZIYnJEMkltZHQ2NUFZY1R3a1M2bUYiLCJzY29wZSI6ImdlbmVyYWwiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.VcQUqMRsvdbP7J7vjQo3OIKSkPTfK0r7KcnRjkF7TbdXeNohPclVbceFw_im_eer_J2jxCyEzj9MUuGyqoorvKQs_zRPbQpI415RF2c83WvE4xx2KynrLbv-8Ei7GCj2H1DIq0-Y8egu8ozPqQTMF0iOGLSUncXDzjgXZAn5vXj-i2QOjA-Q1zhF6bJX-zd52LDL38TFshe95c-bmFjyKDdgg5a_VotbdpCcPmux7KmoL_nZWJUKARMvHiakTmlp3rgNrfvra2H6QH9dW3Fuw4dKcNiAiPDpzveXpqbyBVB66O6GgNr6sBzQw385mjeWOxZ4eV98EC8NBKHVhlKrWg'
 	return axios({
 		method: 'get',
-		url: 'https://odi-amr.herokuapp.com/api/antimicrobials',
-		headers: { 'Authorization': 'Bearer ' + key }
+		url: 'https://odi-amr.herokuapp.com/api/antimicrobials'
 	})
 }

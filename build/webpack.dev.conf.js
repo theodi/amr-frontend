@@ -69,6 +69,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     ]),
 		new webpack.DefinePlugin({
 			API_KEY: JSON.stringify(myEnv.parsed.accessToken),
+			CLIENT_ID: JSON.stringify(myEnv.parsed.client_id),
+			CLIENT_SECRET: JSON.stringify(myEnv.parsed.client_secret)
 		}),
   ]
 })

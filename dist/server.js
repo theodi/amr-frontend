@@ -1,9 +1,11 @@
+const auth = require('./auth');
 const express = require('express');
 const path = require('path');
 const history = require('connect-history-api-fallback')
 const serveStatic = require('serve-static');
 const app = express();
 
+app.use(auth);
 app.use(serveStatic(__dirname));
 app.use(history())
 app.use(serveStatic(__dirname));

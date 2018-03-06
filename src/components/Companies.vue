@@ -5,8 +5,8 @@
 			<div class="box">
 				<h3>{{ c.name }}</h3>
 				<p>Description</p>
-				<div v-for="p in getProgrammes(c.programmes)" :key="p.id">
-					<h4>{{ p.name }} Programme</h4>
+				<div class="" v-for="p in getProgrammes(c.programmes)" :key="p.id">
+					<h4 class="title">{{ p.name }} Programme</h4>
 					<div class="programme-meta">
 						<p class="years"><strong>Years active: </strong>{{ p.yearsActive }}</p>
 						<p class="countries"><strong>Countries: </strong>{{ p.countriesRegions.length }}</p>

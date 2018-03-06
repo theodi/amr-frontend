@@ -2,13 +2,17 @@
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 2px solid black;
-	margin-bottom: 0em;
-	color: #716d6d;
+	margin-bottom: 1em;
+
 	text-align: left;
+	.title {
+		flex: 0 0 100%;
+	}
 
 	.years, .countries, .studies {
 		flex: 0 0 20%;
-		padding-bottom: 0.4em;
+		color: #716d6d;
+		padding-bottom: 0.6em;
 		margin-bottom: 0;
 
 		&.years {

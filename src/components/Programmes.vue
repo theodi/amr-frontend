@@ -11,7 +11,6 @@
 					<p class="years"><strong>Years active: </strong>{{ p.yearsActive }}</p>
 					<p class="countries"><strong>Countries: </strong>{{ p.countriesRegions.length }}</p>
 					<p class="studies"><strong>Studies: </strong>{{ returnCount(p.numberOfStudies) }}</p>
-					<router-link :to="'/programmes/' + p.url" class="arrow-right"></router-link>
 				</div>
 			</div>
 		</div>

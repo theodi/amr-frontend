@@ -36,7 +36,6 @@ export default {
 	created () {
 		getAllCompanies()
 		.then(response => {
-			console.log(response.data.companies)
 			this.companies = response.data.companies
 		})
 		.catch(e => {
@@ -59,7 +58,7 @@ export default {
 			return array
 		},
 		returnCount: function (number) {
-			return (number > 0) ? number : 0
+			return (number === null) ? 0 : number
 		}
 	}
 }

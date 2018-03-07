@@ -2,16 +2,25 @@
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 2px solid black;
-	margin-bottom: 0em;
+	max-width: 100%;
+	margin: 1em 0 0 0 ;
+	text-align: 100%;
 	color: #716d6d;
 
 	.years, .countries, .studies {
-		flex: 0 0 33%;
-		padding-bottom: 0.4em;
-		margin-bottom: 0;
+		flex: 0 0 50%;
+		color: #716d6d;
+		padding-bottom: 0.8em;
+		margin: 0 1em 0 0;
 
-		&.years {
-			flex: 0 0 45%;
+		&.countries {
+			flex: 0 0 20%;
+			text-align: left;
+		}
+
+		&.studies {
+			flex: 0 0 20%;
+			text-align: left;
 		}
 	}
 }

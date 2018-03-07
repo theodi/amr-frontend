@@ -3,12 +3,14 @@
 		<h2 class="title-head">Research programmes</h2>
 		<div v-for="p in programmes" :key="p.id">
 			<div class="box">
-				<h3>{{ p.name }}</h3>
-				<h4 v-for="c in getCompanies(p.companies)" :key="c.id">{{ c.name }}</h4>
+				<a v-bind:href="/programmes/ + p.url">
+					<h3>{{ p.name }}</h3>
+				</a>
+				<h4 class="title" v-for="c in getCompanies(p.companies)" :key="c.id">{{ c.name }}</h4>
 				<div class="programme-meta">
 					<p class="years"><strong>Years active: </strong>{{ p.yearsActive }}</p>
 					<p class="countries"><strong>Countries: </strong>{{ p.countriesRegions.length }}</p>
-					<p class="studies"><strong>Studies: </strong>{{ p.numberOfStudies }}</p>
+					<p class="studies"><strong>Studies: </strong>{{ returnCount(p.numberOfStudies) }}</p>
 					<router-link :to="'/programmes/' + p.url" class="arrow-right"></router-link>
 				</div>
 			</div>
@@ -52,6 +54,9 @@ export default {
 				array.push(this.companies[i])
 			})
 			return array
+		},
+		returnCount: function (number) {
+			return (number === null) ? 0 : number
 		}
 	}
 }

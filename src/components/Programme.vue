@@ -7,9 +7,11 @@
 				<div class="meta-box">
 					<div class="meta-content-box">
 						<p class="active"><strong>Active: </strong> {{ p.yearsActive }}</p>
-						<p class="studies"><strong>Studies: </strong> {{ p.numberOfStudies }}</p>
+						<p class="studies"><strong>Studies: </strong> {{ returnCount(p.numberOfStudies) }}</p>
 					</div>
-					<p><strong>Regions: </strong> <span v-for="r in p.countriesRegions" :key="r.id">{{ r }}, </span></p>
+					<!-- <p><strong>Regions: </strong> <span v-for="r in p.countriesRegions" :key="r.id">{{ r + ',' }} </span></p> -->
+					<p><strong>Regions: </strong>{{ removeComma(p.countriesRegions) }}</p>
+					<p></p>
 				</div>
 				<h3>Primary objective</h3>
 				<p>{{ p.primaryObjective }}</p>
@@ -19,7 +21,8 @@
 				<div class="anti-box" v-for="a in getAntimicrobials(p.antimicrobials)" :key="a.id">
 					<h4>{{ a.genericName }}</h4>
 					<div class="anti-meta flex-start">
-						<p class="trade-name"><strong>Trade names: </strong><span v-for="t in a.tradeName" :key="t.id">{{ t }}, </span></p>
+						<!-- <p class="trade-name"><strong>Trade names: </strong><span v-for="t in a.tradeName" :key="t.id">{{ t }}, </span></p> -->
+						<p class="trade-name"><strong>Trade names: </strong>{{ removeComma(a.tradeName) }}</p>
 						<p class="class-name"><strong>Class of agent: </strong>{{ a.classOfAgent }}</p>
 					</div>
 				</div>
@@ -160,6 +163,20 @@ export default {
 				array.push(this.antimicrobials[i])
 			})
 			return array
+		},
+		removeComma: function (regions) {
+			var string = ''
+			for (var i = 0; i < regions.length; i++) {
+				if ( i == (regions.length -1)) {
+					string += regions[i]
+				} else {
+					string += regions[i] + ', '
+				}
+			}
+			return string
+		},
+		returnCount: function (number) {
+			return (number === null) ? 0 : number
 		}
 	}
 }

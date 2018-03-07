@@ -4,14 +4,15 @@
 		<div v-for="c in companies" :key="c.id">
 			<div class="box">
 				<h3>{{ c.name }}</h3>
-				<p>Description</p>
-				<div class="" v-for="p in getProgrammes(c.programmes)" :key="p.id">
-					<h4 class="title">{{ p.name }} Programme</h4>
+				<!-- <p>Description</p> -->
+				<div v-for="p in getProgrammes(c.programmes)" :key="p.id">
+					<a v-bind:href="/programmes/ + p.url">
+						<h4 class="title">{{ p.name }} Programme</h4>
+					</a>
 					<div class="programme-meta">
 						<p class="years"><strong>Years active: </strong>{{ p.yearsActive }}</p>
-						<p class="countries"><strong>Countries: </strong>{{ p.countriesRegions.length }}</p>
-						<p class="studies"><strong>Studies: </strong>{{ p.numberOfStudies }}</p>
-						<router-link :to="'/programmes/' + p.url" class="arrow-right"></router-link>
+						<p class="countries"><strong>Countries: </strong>{{ returnCount(p.countriesRegions.length) }}</p>
+						<p class="studies"><strong>Studies: </strong>{{ returnCount(p.numberOfStudies) }}</p>
 					</div>
 				</div>
 			</div>
@@ -35,6 +36,7 @@ export default {
 	created () {
 		getAllCompanies()
 		.then(response => {
+			console.log(response.data.companies)
 			this.companies = response.data.companies
 		})
 		.catch(e => {
@@ -55,6 +57,9 @@ export default {
 				array.push(this.programmes[i])
 			})
 			return array
+		},
+		returnCount: function (number) {
+			return (number > 0) ? number : 0
 		}
 	}
 }

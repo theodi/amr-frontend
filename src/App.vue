@@ -9,7 +9,7 @@
 		<div class="wrapper">
 			<div class="menu">
 				<div class="menu-links">
-					<router-link :to="{ path: '/' }" class="link">About this research</router-link>
+					<router-link :to="{ path: '/' }" class="link">About</router-link>
 					<router-link :to="{ path: '/companies' }" class="link">Companies</router-link>
 					<router-link :to="{ path: '/programmes' }" class="link">Programmes</router-link>
 					<router-link :to="{ path: '/antimicrobials' }" class="link">Antimicrobials</router-link>

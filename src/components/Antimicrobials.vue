@@ -1,7 +1,8 @@
 <template>
 	<div>
+		{{ antimicrobialList }}
 		<h2 class="title-head">Antimicrobials</h2>
-		<div v-for="a in antimicrobials" :key="a.id">
+		<div v-for="a in sortedArray" :key="a.id">
 			<div class="box">
 				<a v-bind:href="/antimicrobials/ + a.url">
 					<h3>{{ a.name }}</h3>
@@ -37,13 +38,17 @@ export default {
 			this.errors.push(e)
 		})
 	},
-	methods: {
-		getAntimicrobials: function (list) {
-			let array = []
-			list.forEach((i) => {
-				array.push(this.antimicrobials[i])
-			})
-			return array
+	computed: {
+		sortedArray: function () {
+			function compare (a, b) {
+				if (a.name < b.name) {
+					return -1
+				} if (a.name > b.name) {
+					return 1
+				}
+				return 0
+			}
+			return this.antimicrobials.sort(compare)
 		}
 	}
 }

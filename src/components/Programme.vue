@@ -167,7 +167,7 @@ export default {
 		removeComma: function (regions) {
 			var string = ''
 			for (var i = 0; i < regions.length; i++) {
-				if ( i == (regions.length -1)) {
+				if (i === (regions.length - 1)) {
 					string += regions[i]
 				} else {
 					string += regions[i] + ', '

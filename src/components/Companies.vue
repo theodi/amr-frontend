@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h2 class="title-head">Companies</h2>
-		<div v-for="c in companies" :key="c.id">
+		<div v-for="c in sortedArray" :key="c.id">
 			<div class="box">
 				<h3>{{ c.name }}</h3>
 				<!-- <p>Description</p> -->
@@ -59,6 +59,19 @@ export default {
 		},
 		returnCount: function (number) {
 			return (number === null) ? 0 : number
+		}
+	},
+	computed: {
+		sortedArray: function () {
+			function compare (a, b) {
+				if (a.name < b.name) {
+					return -1
+				} if (a.name > b.name) {
+					return 1
+				}
+				return 0
+			}
+			return this.companies.sort(compare)
 		}
 	}
 }

@@ -7,8 +7,8 @@
 					<h3>{{ a.name }}</h3>
 				</a>
 				<div class="programme-meta">
-					<p class="years"><strong>Programmes: </strong>{{ a.programmes }}</p>
-					<!-- <p class="countries"><strong>Antimicrobials: </strong>{{ p.countriesRegions.length }}</p> -->
+					<p class="years"><strong>Programmes: </strong>{{ a.programmes.length }}</p>
+					<p class="countries"><strong>Companies: </strong>{{ a.companies.length }}</p>
 				</div>
 			</div>
 		</div>

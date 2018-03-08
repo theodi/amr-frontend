@@ -62,5 +62,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	@import "../assets/stylesheets/components/_programme.scss"
+	@import "../assets/stylesheets/components/_antimicrobial.scss"
 </style>

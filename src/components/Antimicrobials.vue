@@ -1,17 +1,14 @@
 <template>
 	<div>
-		{{ antimicrobialList }}
 		<h2 class="title-head">Antimicrobials</h2>
 		<div v-for="a in sortedArray" :key="a.id">
 			<div class="box">
 				<a v-bind:href="/antimicrobials/ + a.url">
 					<h3>{{ a.name }}</h3>
 				</a>
-				<p>{{ a }}</p>
 				<div class="programme-meta">
-					<!-- <p class="years"><strong>Years active: </strong>{{ p.yearsActive }}</p>
-					<p class="countries"><strong>Countries: </strong>{{ p.countriesRegions.length }}</p>
-					<p class="studies"><strong>Studies: </strong>{{ returnCount(p.numberOfStudies) }}</p> -->
+					<p class="years"><strong>Programmes: </strong>{{ a.programmes }}</p>
+					<!-- <p class="countries"><strong>Antimicrobials: </strong>{{ p.countriesRegions.length }}</p> -->
 				</div>
 			</div>
 		</div>
@@ -55,5 +52,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	@import "../assets/stylesheets/components/_programmes.scss"
+	@import "../assets/stylesheets/components/_antimicrobials.scss"
 </style>

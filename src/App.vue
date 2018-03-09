@@ -18,7 +18,8 @@
 			<div class="content">
 				<router-view></router-view>
 			</div>
-			<!-- <div class="footer">Footer</div> -->
+			<div class="footer">
+			</div>
 		</div>
   </div>
 </template>

@@ -56,6 +56,7 @@
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: 40px 100px 40px;
+	margin-bottom: 2em;
 
 	.menu {
 		grid-column: span 4;
@@ -96,6 +97,10 @@
 		grid-column: span 12;
 		background: #FAFAFA;
 		padding: 1em;
+		bottom: 0;
+		position: fixed;
+		width: 100vw;
+		text-align: center;
 	}
 }
 

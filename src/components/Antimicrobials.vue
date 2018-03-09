@@ -8,7 +8,7 @@
 				</a>
 				<div class="programme-meta">
 					<p class="years"><strong>Programmes: </strong>{{ a.programmes.length }}</p>
-					<p class="countries"><strong>Companies: </strong>{{ a.companies.length }}</p>
+					<p class="years"><strong>In Development: </strong>{{ returnBoolean(a.inDevelopment) }}</p>
 				</div>
 			</div>
 		</div>
@@ -46,6 +46,11 @@ export default {
 				return 0
 			}
 			return this.antimicrobials.sort(compare)
+		}
+	},
+	methods: {
+		returnBoolean: function (i) {
+			return (i === true) ? 'Yes' : 'No'
 		}
 	}
 }

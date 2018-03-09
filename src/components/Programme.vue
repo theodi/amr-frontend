@@ -18,7 +18,9 @@
 			<div class="content-box">
 				<h3>Antimicrobials used in this programme</h3>
 				<div class="anti-box" v-for="a in getAntimicrobials(p.antimicrobials)" :key="a.id">
-					<h4>{{ a.genericName }}</h4>
+					<a v-bind:href='"/antimicrobials/" + a.url'>
+						<h4>{{ a.genericName }}</h4>
+					</a>
 					<div class="anti-meta flex-start">
 						<p class="trade-name"><strong>Trade names: </strong>{{ removeComma(a.tradeName) }}</p>
 						<p class="class-name"><strong>Class of agent: </strong>{{ a.classOfAgent }}</p>

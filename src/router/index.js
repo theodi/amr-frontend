@@ -1,7 +1,8 @@
 /* eslint-disable */
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
+import HomePage from '@/components/Home'
+import MethodologyPage from '@/components/Methodology'
 import CompaniesPage from '@/components/Companies'
 import ProgrammesPage from '@/components/Programmes'
 import ProgrammePage from '@/components/Programme'
@@ -16,7 +17,12 @@ export default new Router({
 		{
 			path: '/',
 			name: 'Home',
-			component: Home
+			component: HomePage
+		},
+		{
+			path: '/methodology',
+			name: 'Methodology',
+			component: MethodologyPage
 		},
 		{
 			path: '/companies',

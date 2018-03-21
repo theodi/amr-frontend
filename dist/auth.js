@@ -1,7 +1,7 @@
 const auth = require('basic-auth')
 
 const admin = {
-	'info@odi.org': { password: 'opendata'}
+	'amrinitiative': { password: 'amr2018'}
 }
 
 module.exports = function(req, res, next) {

@@ -62,7 +62,7 @@
 	text-align: center;
 
 	.header-content {
-		width: 65vw;
+		width: 90vw;
 		margin: auto;
 		text-align: left;
 
@@ -157,7 +157,7 @@
 		text-align: center;
 
 		.header-content {
-			width: 65vw;
+			width: 90vw;
 			margin: auto;
 			text-align: left;
 
@@ -189,6 +189,12 @@
 					display: block;
 					color: #000000;
 					margin-bottom: 1.6em;
+				}
+
+				a:after {
+					display: block;
+					content:'';
+					background: #F0F0F0 !important;
 				}
 
 				a:hover {

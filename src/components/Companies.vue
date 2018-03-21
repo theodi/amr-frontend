@@ -11,7 +11,7 @@
 					<div class="programme-meta">
 						<p class="years"><strong>Years active: </strong>{{ p.yearsActive }}</p>
 						<p class="countries"><strong>Countries: </strong>{{ returnCount(p.countriesRegions.length) }}</p>
-						<p class="studies"><strong>Studies: </strong>{{ returnCount(p.numberOfStudies) }}</p>
+						<p class="studies"><strong>Antimicrobials: </strong>{{ returnCount(p.antimicrobials.length) }}</p>
 					</div>
 				</div>
 			</div>

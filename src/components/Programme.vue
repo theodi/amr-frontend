@@ -16,18 +16,6 @@
 				<p>{{ p.primaryObjective }}</p>
 			</div>
 			<div class="content-box">
-				<h3>Antimicrobials used in this programme</h3>
-				<div class="anti-box" v-for="a in getAntimicrobials(p.antimicrobials)" :key="a.id">
-					<a v-bind:href='"/antimicrobials/" + a.url'>
-						<h4>{{ a.genericName }}</h4>
-					</a>
-					<div class="anti-meta flex-start">
-						<p class="trade-name"><strong>Trade names: </strong>{{ removeComma(a.tradeName) }}</p>
-						<p class="class-name"><strong>Class of agent: </strong>{{ a.classOfAgent }}</p>
-					</div>
-				</div>
-			</div>
-			<div class="content-box">
 				<h3>About the data</h3>
 				<table class="table table-striped">
 					<tbody>
@@ -71,11 +59,11 @@
 							<td>{{ p.dataset.stored }}</td>
 						</tr>
 						<tr>
-							<td class="td-title"><strong>Data access:</strong></td>
-							<td>{{ p.dataset.stored }}</td>
+							<td class="td-title"><strong>Data access method:</strong></td>
+							<td>{{ p.dataset.datasetAccessHow}}</td>
 						</tr>
 						<tr>
-							<td class="td-title"><strong>Access:</strong></td>
+							<td class="td-title"><strong>Who can access:</strong></td>
 							<td>{{ p.dataset.datasetAccessWho }}</td>
 						</tr>
 						<tr>
@@ -83,8 +71,12 @@
 							<td>{{ p.dataset.datasetAccessResponsible }}</td>
 						</tr>
 						<tr>
-							<td class="td-title"><strong>Isolates number:</strong></td>
+							<td class="td-title"><strong>Isolates per year:</strong></td>
 							<td>{{ p.dataset.isolates }}</td>
+						</tr>
+						<tr>
+							<td class="td-title"><strong>Total Isolates:</strong></td>
+							<td>{{ p.dataset.totalIsolates }}</td>
 						</tr>
 						<tr>
 							<td class="td-title"><strong>Format:</strong></td>
@@ -96,6 +88,18 @@
 						</tr>
 					</tbody>
 				</table>
+			</div>
+			<div class="content-box">
+				<h3>Antimicrobials used in this programme</h3>
+				<div class="anti-box" v-for="a in getAntimicrobials(p.antimicrobials)" :key="a.id">
+					<a v-bind:href='"/antimicrobials/" + a.url'>
+						<h4>{{ a.genericName }}</h4>
+					</a>
+					<div class="anti-meta flex-start">
+						<p class="trade-name"><strong>Other names: </strong>{{ removeComma(a.tradeName) }}</p>
+						<p class="class-name"><strong>Class of agent: </strong>{{ a.classOfAgent }}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -11,7 +11,7 @@
 							<td>{{ a.genericName }}</td>
 						</tr>
 						<tr>
-							<td class="td-title"><strong>Trade names:</strong></td>
+							<td class="td-title"><strong>Other names:</strong></td>
 							<td>{{ removeComma(a.tradeName) }}</td>
 						</tr>
 						<tr>

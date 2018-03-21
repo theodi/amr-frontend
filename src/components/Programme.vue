@@ -52,6 +52,9 @@
 			</div>
 			<div class="content-box">
 				<h3>Dataset</h3>
+				<p v-if="p.id === 10">Disclaimer: These data are provided for illustration
+				purposes only. The data are anonymised and data from China and India only
+				are included at this time.</p>
 				<table class="table table-striped">
 					<tbody>
 						<tr>
@@ -85,6 +88,16 @@
 						<tr>
 							<td class="td-title"><strong>How is data from previous years added:</strong></td>
 							<td>{{ p.dataset.integration }}</td>
+						</tr>
+						<tr v-if="p.id === 10">
+							<td class="td-title"><strong>Anonymisation instructions:</strong></td>
+							<div class="dataset_instructions" v-for="link in p.dataset.anonymisationInstructions">
+								<td><a v-bind:href="link">Download</a></td>
+							</div>
+						</tr>
+						<tr v-if="p.id === 10">
+							<td class="td-title"><strong>Dataset file:</strong></td>
+							<td><a v-bind:href="p.dataset.datasetFile">Download</a></td>
 						</tr>
 					</tbody>
 				</table>

@@ -85,7 +85,7 @@ h2 {
 }
 
 img {
-	margin-top: 1em;
+	margin: 1em 0 1em 0;
 	height: 75px;
 }
 </style>

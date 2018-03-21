@@ -48,6 +48,13 @@
 	table {
 		margin-top: 1.4em;
 
+		tr {
+			.dataset_instructions {
+				width: 30%;
+				float: left;
+			}
+		}
+
 		td {
 			border-top: none;
 		}

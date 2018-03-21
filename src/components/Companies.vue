@@ -4,7 +4,6 @@
 		<div v-for="c in sortedArray" :key="c.id">
 			<div class="box">
 				<h3>{{ c.name }}</h3>
-				<!-- <p>Description</p> -->
 				<div v-for="p in getProgrammes(c.programmes)" :key="p.id">
 					<a v-bind:href="/programmes/ + p.url">
 						<h4 class="title">{{ p.name }} Programme</h4>
@@ -71,7 +70,13 @@ export default {
 				}
 				return 0
 			}
-			return this.companies.sort(compare)
+			var array = []
+			for (var i = 0; i < this.companies.length; i++) {
+				if (this.companies[i].id !== 2 && this.companies[i].id !== 3 && this.companies[i].id !== 5) {
+					array.push(this.companies[i])
+				}
+			}
+			return array.sort(compare)
 		}
 	}
 }

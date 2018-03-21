@@ -20,7 +20,7 @@ export default new Router({
 			component: HomePage
 		},
 		{
-			path: '/methodology',
+			path: '/project-overview',
 			name: 'Methodology',
 			component: MethodologyPage
 		},

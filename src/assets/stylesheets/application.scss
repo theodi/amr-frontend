@@ -62,8 +62,6 @@
 		grid-column: span 4;
 		grid-row: span 12;
 		padding: 2em;
-		padding-right: 3em;
-		margin-left: 10vw;
 		text-align: right;
 
 		.menu-links {
@@ -87,10 +85,9 @@
 	}
 
 	.content {
-		grid-column: span 8;
+		grid-column: span 6;
 		grid-row: span 12;
 		padding: 2em;
-		margin-right: 10vw;
 	}
 
 	.footer {

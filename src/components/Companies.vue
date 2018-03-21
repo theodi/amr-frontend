@@ -1,6 +1,10 @@
 <template>
 	<div>
 		<h2 class="title-head">Companies</h2>
+		<p>Pharmaceutical companies develop and market multiple drugs, including
+		antimicrobials. They also conduct surveillance of antimicrobial resistance
+		(AMR). This register contains information on six companies who conduct AMR
+		surveillance.</p>
 		<div v-for="c in sortedArray" :key="c.id">
 			<div class="box">
 				<h3>{{ c.name }}</h3>

@@ -40,7 +40,7 @@
 		global organisations such as the United Nations, the World Health Organisation,
 		and wider society.</p>
 		<p>We would like to thank all companies who took part in this initiative
-		<router-link :to="{ path: '/project-overview' }" class="link">(see project overview)</router-link>.</p>
+		<router-link :to="{ path: '/project-overview' }" class="link">(see project overview).</router-link></p>
 		<h2>Contact</h2>
 		<p>For further information, please contact
 		<a href="mailto:david.beardmore@theodi.org">David Beardmore</a>,

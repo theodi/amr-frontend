@@ -8,9 +8,9 @@
 		committing to sharing surveillance data to make it accessible to public
 		health bodies and healthcare professionals:</p>
 		<ul>
-			<li>The <a href="https://amr-review.org/industry-declaration.html">
+			<li>The <a href="https://www.ifpma.org/partners-2/declaration-by-the-pharmaceutical-biotechnology-and-diagnostics-industries-on-combating-antimicrobial-resist" target="_blank">
 			Davos declaration</a> (January 2016)</li>
-			<li>The <a href="https://www.un.org/pga/71/wp-content/uploads/sites/40/2016/09/DGACM_GAEAD_ESCAB-AMR-Draft-Political-Declaration-1616108E.pdf">
+			<li>The <a href="https://www.un.org/pga/71/wp-content/uploads/sites/40/2016/09/DGACM_GAEAD_ESCAB-AMR-Draft-Political-Declaration-1616108E.pdf" target="_blank">
 			United Nations Global Assembly Declaration</a> (September 2016)</li>
 		</ul>
 		<p>There is a need to share data from the global antibiotic surveillance
@@ -54,7 +54,7 @@
 		Limited, a company registered in England and Wales, no. 2711000
 		(whose registered office is at 215 Euston Road, London NW1 2BE, UK)</p>
 		<img src="https://static1.squarespace.com/static/582df1a059cc6819b296dc18/59b0346be5dd5bf05630284b/59b03483cf81e08cebd27669/1504720252596/250px-Wellcome_Trust_logo.svg.png" alt="Wellcome Trust">
-		<p>Find out more about Wellcome <a href="https://wellcome.ac.uk/about-us">here</a></p>
+		<p>Find out more about Wellcome <a href="https://wellcome.ac.uk/about-us" target="_blank">here</a></p>
 		<h2>ODI</h2>
 		<p>The ODI was co-founded in 2012 by the inventor of the web Sir Tim Berners-Lee
 		and Artificial Intelligence expert Sir Nigel Shadbolt to advocate for the
@@ -68,7 +68,7 @@
 		everyone interested in developing with data – whether on an individual,
 		organisational or global level – to get in touch.</p>
 		<img src="https://jobs.theguardian.com/getasset/1607e58f-a71b-4ffd-9a66-bc43d00a006e/" alt="Open Data Institute">
-		<p>Find out more about the ODI <a href="https://theodi.org">here</a></p>
+		<p>Find out more about the ODI <a href="https://theodi.org" target="_blank">here</a></p>
 	</div>
 </template>
 

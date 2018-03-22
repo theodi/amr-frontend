@@ -4,6 +4,7 @@
 			<div class="header-content">
 				<h1>AMR RESEARCH INITIATIVE</h1>
 				<p>A partnership between the Open Data Institute and Wellcome Trust</p>
+				<title>AMR Register</title>
 			</div>
 		</div>
 		<div class="wrapper">

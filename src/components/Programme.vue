@@ -103,6 +103,14 @@
 				</table>
 			</div>
 			<div class="content-box">
+				<h3>Publications</h3>
+				<div class="publications"v-for="(f, index) in p.publications.publicationTitles" key="f.id">
+					<a :href="p.publications.publicationURLs[index]">{{ f }}</a>
+				</div>
+				<h4>Methdology Reference</h4>
+				<p>{{ p.publications.methodologyReference }}</p>
+			</div>
+			<div class="content-box">
 				<h3>Antimicrobials used in this programme</h3>
 				<div class="anti-box" v-for="a in getAntimicrobials(p.antimicrobials)" :key="a.id">
 					<a v-bind:href='"/antimicrobials/" + a.url'>

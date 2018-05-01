@@ -117,6 +117,19 @@
 		grid-column: span 6;
 		grid-row: span 12;
 		padding: 2em;
+
+		img {
+			display: block;
+			max-width: 100%;
+		}
+
+		.title-head {
+			margin-top: 0 !important;
+		}
+
+		.image-box {
+			margin-bottom: 2em;
+		}
 	}
 }
 

@@ -31,6 +31,77 @@
 		surveillance programmes, and antimicrobials. Companies can have multiple
 		programmes; programmes can collect data on multiple antimicrobials; which
 		themselves can sit within multiple programmes and companies.</p>
+		<h2>Summary of data in the register</h2>
+		<h3>Scope of datasets</h3>
+		<p>A total of twelve programmes are currently included in the register.
+		Datasets held by pharmaceutical companies covers hundreds of thousands of
+		isolates collected from local laboratories in 93 countries across the world.
+		While there is underrepresentation of certain regions (e.g. sub-Saharan Africa)
+		and some countries are represented by only a single site, companies are making
+		a significant contribution to global AMR surveillance by successfully
+		collecting high-quality data on clinical isolates from settings where
+		currently other robust surveillance data is not available.</p>
+		<div class="image-box">
+			<img src="../assets/img/overview-1.png" alt="">
+			<i>Countries covered by programmes. Size of circle indicates number of programmes.</i>
+		</div>
+		<p>Regulatory requirements mean that surveillance programmes focusing on a
+		company’s own antimicrobials (whether in development or post approval) also
+		include a large number of comparator antimicrobials: in total, programmes
+		covered 85 antimicrobials. Companies publish multiple scientific papers based
+		on data from their programmes. Generally, data published with papers is
+		summary data (i.e. reporting percentages susceptible/resistant to
+		antimicrobials or showing an MIC distribution) rather than 'raw' MIC data
+		for each isolate. Furthermore, it is currently a considerable challenge to
+		integrate disparate sources of data together on an ad hoc basis. </p>
+		<h3>Programme methodologies</h3>
+		<p>Overall, surveillance methods used have more similarities than differences.
+		This reflects the standardisation due to regulatory requirements and guidance.
+		Furthermore, third parties are often contracted to conduct surveillance by
+		pharmaceutical companies, further driving this standardisation.</p>
+		<div class="image-box">
+			<img src="../assets/img/overview-2.png" alt="">
+			<i>A 'surveillance pyramid'. Isolates collected for surveillance by
+			pharmaceutical companies represent the top of this pyramid. </i>
+		</div>
+		<p><strong>Isolate collection:</strong> The majority of programmes actively
+		collect bacterial isolates from local labs. These participating labs submit
+		isolates from infected patients originally collected as part of routine
+		clinical practice. An alternative method is to use a sub-contractor’s stock
+		of isolates (e.g. IHMA). All companies included use a straightforward
+		laboratory-based surveillance approach, without detailed follow-up such as
+		visits to wards.</p>
+		<p><strong>Testing methods:</strong> Organism identification and MIC
+		methodology are all standardised. Systems are accredited and validated,
+		with central laboratories validating all organism identification from
+		local labs. Where MIC breakpoints exist for antimicrobials i.e. those not in
+		development, companies use CLSI and/or EUCAST breakpoints.</p>
+		<p><strong>Infections covered:</strong> Typically organisms come from sites
+		that are dependent on the indications for an antimicrobial. Some programmes
+		limit the proportion of isolates from a particular site (e.g. urinary tract
+		up to 10% of isolates) and some by organism (e.g. 50 isolates of Klebsiella spp.).
+		Definitions of infection are left to local clinicians.</p>
+		<p><strong>Inclusion and exclusion criteria:</strong> Duplicate isolates are
+		excluded from surveillance, but the exact details of this were not explored
+		further so the nature of this exclusion may not be the same.</p>
+		<h3>About the datasets listed</h3>
+		<p><strong>Format and management:</strong> Datasets are stored as databases
+		and/or spreadsheets. Databases tended to be managed by external specialised
+		companies, whereas pharmaceutical companies use spreadsheets internally.</p>
+		<p><strong>Access:</strong> The majority of companies do not currently make
+		their datasets widely accessible to the public. Participating investigators
+		in surveillance programmes are given access to the relevant part of datasets,
+		either by being sent their data on a disc, emailed a spreadsheet, or given
+		access to a secure website. Two companies have websites that provide MIC
+		distributions that are accessible to the public to some extent at the level of
+		country. Data down to site level is not provided, and data is generally not
+		downloadable in machine-readable format by members of the public.</p>
+		<p><strong>Relationship to other surveillance data:</strong> The data
+		collected by pharmaceutical surveillance programmes is based on priority
+		specimens sent routinely to laboratories and therefore aligns most closely
+		with the following metric included in WHO’s GLASS protocol: "Proportion of
+		samples with growth of non-susceptible bacteria of the species and antibiotic
+		under surveillance per specimen type" <a href="goo.gl/nQiCiw">(WHO, 2015)</a></p>
 	</div>
 </template>
 
@@ -42,4 +113,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>

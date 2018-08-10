@@ -7,7 +7,5 @@
  "scripts": {
   "postinstall": "npm install express connect-history-api-fallback auth-static"
  },
- "dependencies": {
-  "basic-auth": "^2.0.0"
- }
+ "dependencies": {}
 }

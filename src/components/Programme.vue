@@ -95,10 +95,10 @@
 								<td><a v-bind:href="link">Download</a></td>
 							</div>
 						</tr>
-						<tr v-if="p.id === 10">
+						<!-- <tr v-if="p.id === 10">
 							<td class="td-title"><strong>Dataset file:</strong></td>
 							<td><a v-bind:href="p.dataset.datasetFile">Download</a></td>
-						</tr>
+						</tr> -->
 					</tbody>
 				</table>
 			</div>

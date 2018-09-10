@@ -21,9 +21,6 @@
 				<router-view></router-view>
 			</div>
 		</div>
-		<div class="footer">
-			<p>The content of this website is licenced under a Attribution-NonCommercial 3.0 Unported <a href="https://creativecommons.org/licenses/by-nc/3.0/" title="(CC BY-NC 3.0) licence" target="_blank">(CC BY-NC 3.0)</a> licence</p>
-		</div>
   </div>
 </template>
 

@@ -69,6 +69,7 @@
 		organisational or global level – to get in touch.</p>
 		<img src="https://jobs.theguardian.com/getasset/1607e58f-a71b-4ffd-9a66-bc43d00a006e/" alt="Open Data Institute">
 		<p>Find out more about the ODI <a href="https://theodi.org" target="_blank">here</a></p>
+		<p>Licenced under a Attribution-NonCommercial 3.0 Unported <a href="https://creativecommons.org/licenses/by-nc/3.0/" title="(CC BY-NC 3.0) licence" target="_blank">(CC BY-NC 3.0)</a> licence</p>
 	</div>
 </template>
 

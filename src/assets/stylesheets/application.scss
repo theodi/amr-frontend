@@ -52,8 +52,6 @@
 	}
 }
 
-
-
 // CSS Grid structure
 .header {
 	grid-column: span 12;
@@ -131,19 +129,6 @@
 		.image-box {
 			margin-bottom: 2em;
 		}
-	}
-}
-
-.footer {
-	grid-column: span 12;
-	background: #FAFAFA;
-	padding: 1em;
-	bottom: 0;
-	width: 100vw;
-	text-align: center;
-
-	p {
-		margin-bottom: 0;
 	}
 }
 
@@ -227,12 +212,6 @@
 			grid-row: span 12;
 			padding: 2em;
 			margin-right: 0;
-		}
-
-		.footer {
-			grid-column: span 12;
-			background: #FAFAFA;
-			padding: 1em;
 		}
 	}
 

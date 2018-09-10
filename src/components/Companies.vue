@@ -1,15 +1,22 @@
 <template>
 	<div>
-		<h1 class="title-head">Companies</h1>
-		<h3 style="color:red; text-align: left;">Data source can be found <a href="https://odi-amr.herokuapp.com/api/companies">here</a></h3>
-		<div v-for="c in companies" :key="c.id">
+		<h2 class="title-head">Companies</h2>
+		<p>Pharmaceutical companies develop and market multiple drugs, including
+		antimicrobials. They also conduct surveillance of antimicrobial resistance
+		(AMR). This register contains information on six companies who conduct AMR
+		surveillance.</p>
+		<div v-for="c in sortedArray" :key="c.id">
 			<div class="box">
-				<h2>{{ c.name }}</h2>
-				<div v-for="p in getProgrammes(c.programmes)" :key="p.id" class="programme-box">
-					<h3>{{ p.name }} Programme</h3>
-					<p><strong>Years active: </strong>{{ p.yearsActive }}</p>
-					<p><strong>Countries: </strong>{{ p.countriesRegions }}</p>
-					<router-link :to="'/programmes/' + p.url">More on {{ p.name }}</router-link>
+				<h3>{{ c.name }}</h3>
+				<div v-for="p in getProgrammes(c.programmes)" :key="p.id">
+					<a v-bind:href="/programmes/ + p.url">
+						<h4 class="title">{{ p.name }} Programme</h4>
+					</a>
+					<div class="programme-meta">
+						<p class="years"><strong>Years active: </strong>{{ p.yearsActive }}</p>
+						<p class="countries"><strong>Countries: </strong>{{ returnCount(p.countriesRegions.length) }}</p>
+						<p class="studies"><strong>Antimicrobials: </strong>{{ returnCount(p.antimicrobials.length) }}</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -52,10 +59,33 @@ export default {
 				array.push(this.programmes[i])
 			})
 			return array
+		},
+		returnCount: function (number) {
+			return (number === null) ? 0 : number
+		}
+	},
+	computed: {
+		sortedArray: function () {
+			function compare (a, b) {
+				if (a.name < b.name) {
+					return -1
+				} if (a.name > b.name) {
+					return 1
+				}
+				return 0
+			}
+			var array = []
+			for (var i = 0; i < this.companies.length; i++) {
+				if (this.companies[i].id !== 2 && this.companies[i].id !== 3 && this.companies[i].id !== 5) {
+					array.push(this.companies[i])
+				}
+			}
+			return array.sort(compare)
 		}
 	}
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+	@import "../assets/stylesheets/components/_companies.scss"
 </style>

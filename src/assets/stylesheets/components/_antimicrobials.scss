@@ -1,0 +1,26 @@
+.programme-meta {
+	display: flex;
+	justify-content: flex-start;
+	border-bottom: 2px solid black;
+	max-width: 100%;
+	margin: 1em 0 0 0 ;
+	text-align: 100%;
+	color: #716d6d;
+
+	.years, .countries, .studies {
+		flex: 0 0 50%;
+		color: #716d6d;
+		padding-bottom: 0.8em;
+		margin: 0;
+
+		&.countries {
+			flex: 0 0 20%;
+			text-align: left;
+		}
+
+		&.studies {
+			flex: 0 0 20%;
+			text-align: left;
+		}
+	}
+}

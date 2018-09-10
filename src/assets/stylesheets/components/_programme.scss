@@ -1,0 +1,91 @@
+.head-content-box {
+	padding: 0 1em 1em 1em;
+
+	.meta-box {
+		border-bottom: 2px solid black;
+		margin: 1em 0 1em 0;
+
+		.meta-content-box {
+			display: flex;
+
+			.active {
+				flex: 0 0 40%;
+				margin-right: 2em;
+			}
+
+			.studies {
+				flex: 0 0 40%;
+			}
+		}
+	}
+}
+
+.content-box {
+	background-color: #FAFAFA;
+	padding: 1em;
+	margin-bottom: 2em;
+	border: 1px solid #F0F0F0;
+
+	.anti-box {
+		border-bottom: 1px solid #7E7E7E;
+		padding-top:1.4em;
+
+		.anti-meta {
+			display: flex;
+			justify-content: space-between;
+			text-align: left;
+
+			.trade-name {
+				flex: 0 0 60%;
+			}
+
+			.class-name {
+				flex: 0 0 40%;
+			}
+		}
+	}
+
+	.publications {
+		a {
+			display:inline-block;
+			color: black;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #5BE6C8;
+		}
+
+		a:after {
+			display: block;
+			content:'';
+			width: 100%;
+			height: 3px;
+			background: none !important;
+			margin-top: -4px;
+			margin-bottom: 1em;
+		}
+	}
+
+	table {
+		margin-top: 1.4em;
+
+		tr {
+			.dataset_instructions {
+				width: 30%;
+				float: left;
+			}
+		}
+
+		td {
+			border-top: none;
+		}
+
+		.td-title {
+			text-align: right;
+			border-right: 2px solid black;
+			padding-right: 2em;
+			width: 35%;
+		}
+	}
+}

@@ -1,23 +1,28 @@
 <template>
   <div id="app">
 		<div class="header">
-			<h3 style="text-align: center;">Antimicrobial Resistance Register</h3>
+			<div class="header-content">
+				<h1>AMR RESEARCH INITIATIVE</h1>
+				<p>A partnership between the Open Data Institute and Wellcome Trust</p>
+				<title>AMR Register</title>
+			</div>
 		</div>
 		<div class="wrapper">
 			<div class="menu">
-				<!-- <a href="/" class="link">Welcome</a>
-				<a href="/about" class="link">About</a>
-				<a href="/companies" class="link">Companies</a>
-				<a href="/programmes" class="link">Programmes</a> -->
-				<router-link :to="{ path: '/' }" class="link">Welcome</router-link>
-				<router-link :to="{ path: '/about' }" class="link">About this research</router-link>
-				<router-link :to="{ path: '/companies' }" class="link">Companies</router-link>
-				<router-link :to="{ path: '/programmes' }" class="link">Programmes</router-link>
+				<div class="menu-links">
+					<router-link :to="{ path: '/' }" class="link">About</router-link>
+					<router-link :to="{ path: '/project-overview' }" class="link">Project overview</router-link>
+					<router-link :to="{ path: '/companies' }" class="link">Companies</router-link>
+					<router-link :to="{ path: '/programmes' }" class="link">Programmes</router-link>
+					<router-link :to="{ path: '/antimicrobials' }" class="link">Antimicrobials</router-link>
+				</div>
 			</div>
 			<div class="content">
 				<router-view></router-view>
 			</div>
-			<!-- <div class="footer">Footer</div> -->
+		</div>
+		<div class="footer">
+			<p>The content of this website is licenced under a Attribution-NonCommercial 3.0 Unported <a href="https://creativecommons.org/licenses/by-nc/3.0/" title="(CC BY-NC 3.0) licence" target="_blank">(CC BY-NC 3.0)</a> licence</p>
 		</div>
   </div>
 </template>
@@ -28,77 +33,6 @@ export default {
 }
 </script>
 
-<style>
-	#app {
-		font-family: 'Avenir', Helvetica, Arial, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-align: left;
-		color: #000000;
-	}
-
-	.wrapper {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: 40px 100px 40px;
-	}
-
-	.header {
-		grid-column: span 12;
-		background: #f6f6f6;
-		padding: 1em;
-	}
-
-	.menu {
-		grid-column: span 4;
-		grid-row: span 12;
-		padding: 2em;
-		margin-left: 10vw;
-		text-align: right;
-	}
-
-	.content {
-		grid-column: span 8;
-		grid-row: span 12;
-		padding: 2em;
-		margin-right: 10vw;
-	}
-
-	.footer {
-		grid-column: span 12;
-		background: #f6f6f6;
-		padding: 1em;
-	}
-
-	.box {
-		background-color: #f6f6f6;
-		text-align: left;
-		margin-bottom: 2em;
-		margin-top: 2em;
-		padding: 1em;
-	}
-
-	.programme-box {
-		border-bottom: 3px solid black;
-		padding-bottom: 1em;
-		margin-bottom: 2em;
-	}
-
-	.link {
-		display: block;
-		color: #000000;
-		margin-bottom: 1em;
-	}
-
-	.small {
-		margin-bottom: 5em;
-	}
-
-	h2 {
-		margin-bottom: 1em;
-	}
-
-	h3 {
-		font-size: 1.4em;
-	}
+<style lang="scss">
+	@import "./assets/stylesheets/application.scss"
 </style>

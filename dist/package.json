@@ -5,6 +5,7 @@
  "author": "Phil Lang - Open Data Institute",
  "private": false,
  "scripts": {
-   "postinstall": "npm install express connect-history-api-fallback"
- }
+  "postinstall": "npm install express connect-history-api-fallback auth-static"
+ },
+ "dependencies": {}
 }

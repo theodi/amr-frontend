@@ -11,6 +11,14 @@ $ npm install
 $ npm run dev
 ```
 
+### Deployment
+The AMR Frontend is deployed to Heroku. In order to deploy the project must be 'built' to the 'dist' directory.
+
+```
+$ npm run build
+$ npm run deploy
+```
+
 ## Built With
 
 * [Vue.JS](http://www.vuejs.org) - JavaScript Framework

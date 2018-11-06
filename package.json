@@ -10,7 +10,8 @@
     "test": "npm run e2e",
     "lint": "eslint . --ext .js --ext .vue || exit 0",
     "build": "node build/build.js",
-    "deploy": "git push heroku `git subtree split --prefix dist master`:master"
+    "deploy": "git push heroku `git subtree split --prefix dist master`:master",
+		"deploystaging": "git push staging `git subtree split --prefix dist master`:master"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -89,11 +89,11 @@
 							<td class="td-title"><strong>How is data from previous years added:</strong></td>
 							<td>{{ p.dataset.integration }}</td>
 						</tr>
-						<tr v-if="p.id === 1">
+						<tr v-for="d in getDatasets(p.dataset.datasets)" :key="d.id">
 							<td class="td-title"><strong>Dataset file:</strong></td>
-							<td>
-								<a v-bind:href="p.dataset.datasetFile">Download</a>
-								<a v-bind:href="p.dataset.datasetFile">Access Instructions</a>
+							<td v-if="p.dataset.datasets">
+								<a v-bind:href="d.fileUrl">Download data</a></br>
+								<a v-bind:href="d.supplementaryFile">Access Instructions</a>
 							</td>
 							<td></td>
 						</tr>
@@ -128,6 +128,7 @@
 import {getAllProgrammes} from '../api/programmes'
 import {getAllCompanies} from '../api/companies'
 import {getAllAntimicrobials} from '../api/antimicrobials'
+import {getAllDatasets} from '../api/datasets'
 
 export default {
 	name: 'Programme',
@@ -136,6 +137,7 @@ export default {
 			programmes: [],
 			companies: [],
 			antimicrobials: [],
+			datasets: [],
 			errors: []
 		}
 	},
@@ -157,6 +159,13 @@ export default {
 		getAllAntimicrobials()
 		.then(response => {
 			this.antimicrobials = response.data.antimicrobials
+		})
+		.catch(e => {
+			this.errors.push(e)
+		})
+		getAllDatasets()
+		.then(response => {
+			this.datasets = response.data.datasets
 		})
 		.catch(e => {
 			this.errors.push(e)
@@ -185,6 +194,14 @@ export default {
 			list.forEach((i) => {
 				array.push(this.antimicrobials[i])
 			})
+			return array
+		},
+		getDatasets: function (list) {
+			let array = []
+			list.forEach((i) => {
+				array.push(this.datasets[i])
+			})
+			console.log(array)
 			return array
 		},
 		removeComma: function (regions) {

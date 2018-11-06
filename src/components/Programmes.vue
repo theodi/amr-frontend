@@ -35,6 +35,7 @@ export default {
 		return {
 			programmes: [],
 			companies: [],
+			datasets: [],
 			errors: []
 		}
 	},
